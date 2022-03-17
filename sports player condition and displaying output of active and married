@@ -1,0 +1,52 @@
+#include <stdio.h>
+#include <string.h>
+
+struct Player
+{
+    char name[20];
+    int age;
+    char adress[100];
+    char condition;     //1 for active and 0 for inactive
+    char maritial_status;   //1 for married and 0 for unmarried
+} p[20];
+
+int main()
+{
+    strcpy(p[0].name,"Raj Patel");
+    p[0].age=25;
+    strcpy(p[0].adress,"a5 123 xyz city pqr country");
+    p[0].condition='1';
+    p[0].maritial_status='1';
+    strcpy(p[1].name,"Hansraj Hathi");
+    p[1].age=45;
+    strcpy(p[1].adress,"202, Hathi lane hathi sheher hathipur");
+    p[1].condition='0';
+    p[1].maritial_status='1';
+    strcpy(p[2].name,"Tushar Kumre");
+    p[2].age=109;
+    strcpy(p[2].adress,"123 xyz pqr abc");
+    p[2].condition='1';
+    p[2].maritial_status='1';
+    strcpy(p[3].name,"Milind Mali");
+    p[3].age=29;
+    strcpy(p[3].adress,"xyz 123 abc pqr");
+    p[3].condition='1';
+    p[3].maritial_status='0';
+    strcpy(p[4].name,"Yash Dongare");
+    p[4].age=19;
+    strcpy(p[4].adress,"a23 34r 65ytr");
+    p[4].condition='0';
+    p[4].maritial_status='0';
+    for(int i=0;i<20;i++)
+    {
+        if(p[i].condition=='1' && p[i].maritial_status=='1')
+        {
+            printf("Name:");
+            puts(p[i].name);
+            printf("Age:%d\n",p[i].age);
+            printf("Adress:");
+            puts(p[i].adress);
+        }
+    }
+    return 0;
+}
